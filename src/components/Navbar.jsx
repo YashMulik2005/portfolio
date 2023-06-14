@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import themehook from './ThemeContext'
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 function Navbar() {
     const { theme, changetheme } = themehook()
@@ -22,16 +23,20 @@ function Navbar() {
 
     return (
         <div>
-            <nav className=' flex h-10 border-b-[1px] justify-between items-center p-2'>
-                <h1 className=' text-xl text-green-500 font-bold'>Portfolio</h1>
-                <button onClick={handletoggle} className='sm:hidden'>click</button>
+            <nav className={`flex h-10 border-b-[1px] ${theme == 'dark' ? 'border-white' : ' border-black'} justify-between items-center p-2`}>
+                <h1 className={`text-xl ${theme == 'dark' ? ' text-green-500' : ' text-green-700'} font-bold`}>Portfolio</h1>
+                {/* <button onClick={handletoggle} className='sm:hidden'>click</button> */}
+                <section onClick={handletoggle} className='sm:hidden'>
+                    <GiHamburgerMenu size={23} />
+                </section>
                 <button onClick={handletheme} className=''>theme</button>
             </nav>
             <div >
-                <ul className={`sm:flex justify-center items-center shadow-md m-1 ${height ? "h-24" : "h-0 overflow-hidden"} sm:h-auto`}>
-                    <li className='m-1 font-semibold'>About</li>
-                    <li className='m-1 font-semibold'>Contact</li>
-                    <li className='m-1 font-semibold'>Project</li>
+                <ul className={`sm:flex justify-center items-center shadow-md m-1 ${height ? "h-28" : "h-0 overflow-hidden"} sm:h-auto`}>
+                    <li className='m-1 font-semibold'><a href='#about'>About</a></li>
+                    <li className='m-1 font-semibold'><a href='#contact'>Contact</a></li>
+                    <li className='m-1 font-semibold'><a href='#project'>Projects</a></li>
+                    <li className='m-1 font-semibold'><a href='#skills'>Skills</a></li>
                 </ul>
             </div>
         </div>
