@@ -9,6 +9,7 @@ function Contact() {
             </div>
             <div className=' sm:w-1/2 w-full p-5'>
                 <form>
+                    <h1 className=' text-center text-2xl font-bold'>Contact</h1>
                     <label className=' text-lg font-semibold m-1'>Name:</label><br />
                     <input type='text' className=' w-full sm:w-2/3 rounded-sm p-1' /><br />
                     <label className=' text-lg font-semibold m-1'>Email:</label><br />
