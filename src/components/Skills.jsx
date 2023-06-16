@@ -17,7 +17,7 @@ function Skills() {
             <h1 className=' text-center text-3xl font-bold'>My Skills</h1>
             <div className=' flex p-5 flex-col sm:flex-row'>
                 <div className=' sm:w-1/4 w-full flex justify-center'>
-                    <div className={`flex flex-col w-56 p-5 overflow-hidden items-center ${first ? " h-64" : "h-32"} ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} m-2 transition-all ease-linear duration-300`}>
+                    <div className={`flex flex-col sm:w-56 p-5 overflow-hidden items-center ${first ? " h-64" : "h-32"} ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} m-2 transition-all ease-linear duration-300`}>
                         {/* <img src={photo} alt="" className=' w-1/2 h-1/2' /> */}
                         <section>
                             <AiFillHtml5 size={50} />
@@ -30,7 +30,7 @@ function Skills() {
                     </div>
                 </div>
                 <div className=' sm:w-1/4 w-full flex justify-center'>
-                    <div className={`flex flex-col w-56 p-5 overflow-hidden items-center ${second ? " h-64" : "h-32"} ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} m-2 transition-all ease-linear duration-300`}>
+                    <div className={`flex flex-col sm:w-56 p-5 overflow-hidden items-center ${second ? " h-64" : "h-32"} ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} m-2 transition-all ease-linear duration-300`}>
                         {/* <img src={photo} alt="" className=' w-1/2 h-1/2' /> */}
                         <section>
                             <FaReact size={50} />
@@ -43,7 +43,7 @@ function Skills() {
                     </div>
                 </div>
                 <div className=' sm:w-1/4 w-full flex justify-center'>
-                    <div className={`flex flex-col w-56 p-5 overflow-hidden items-center ${third ? "h-64" : "h-32"} ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} m-2 transition-all ease-linear duration-300`}>
+                    <div className={`flex flex-col sm:w-56 p-5 overflow-hidden items-center ${third ? "h-64" : "h-32"} ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} m-2 transition-all ease-linear duration-300`}>
                         {/* <img src={photo} alt="" className=' w-1/2 h-1/2' /> */}
                         <section>
                             <FaNodeJs size={50} />
@@ -56,7 +56,7 @@ function Skills() {
                     </div>
                 </div>
                 <div className=' sm:w-1/4 w-full flex justify-center'>
-                    <div className={`flex flex-col w-56 p-5 overflow-hidden items-center ${fourth ? "h-64" : "h-32"} ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} m-2 transition-all ease-linear duration-300`}>
+                    <div className={`flex flex-col sm:w-56 p-5 overflow-hidden items-center ${fourth ? "h-64" : "h-32"} ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} m-2 transition-all ease-linear duration-300`}>
                         {/* <img src={photo} alt="" className=' w-1/2 h-1/2' /> */}
                         <section>
                             <DiCss3 size={50} />

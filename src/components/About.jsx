@@ -9,7 +9,7 @@ function About() {
             <div className=' sm:w-1/2 sm:h-[70vh] w-full'>
                 <img src={photo} alt="" className=' w-full h-full p-5 sm:p-10' />
             </div>
-            <div className=' sm:w-1/2 h-[70vh] flex flex-col justify-center sm:items-start px-7 w-full items-center'>
+            <div className=' sm:w-1/2 sm:h-[70vh] flex flex-col justify-center sm:items-start px-7 w-full items-center'>
                 <h1 className=' text-4xl font-bold'>About Me</h1>
                 <h1 className={` text-xl ${theme == 'dark' ? ' text-green-500' : ' text-green-700'} font-bold`}>Web Developer</h1>
                 <p>I am currently pursing Diploma second year in information Technology.
