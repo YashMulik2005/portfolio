@@ -1,24 +1,63 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import photo from '../assets/react.svg'
+import yash from '../assets/yash.jpg'
 import themehook from './ThemeContext'
+import { motion, useInView } from 'framer-motion'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function Home() {
-    const { theme, changetheme } = themehook()
+    const { theme, changetheme, fade, slideleft } = themehook()
     const handletheme = () => {
         changetheme()
     }
+
+    const divfade = useRef(null)
+    const divslide = useRef(null)
+
+    const fadeview = useInView(divfade, { once: false })
+    const slideview = useInView(divslide, { once: false })
+
+    // const fade = {
+    //     "hidden": { opacity: 0 },
+    //     "visible": { opacity: 1 }
+    // }
+
+    // const slideleft = {
+    //     "hidden": { opacity: 0, x: -40 },
+    //     "visible": { opacity: 1, x: 10 }
+    // }
     return (
         <div className=' flex flex-col sm:flex-row mt-2'>
-            <div className=' flex flex-col sm:w-1/2 items-centers sm:items-start justify-center sm:h-[88vh] px-10 py-5 sm:py-0'>
+            <motion.div className=' flex flex-col sm:w-1/2 items-centers sm:items-start justify-center sm:h-[88vh] px-10 py-5 sm:py-0'
+                ref={divfade}
+                variants={fade}
+                initial="hidden"
+                animate={fadeview ? "visible" : "hidden"}
+                transition={{
+                    duration: 0.9
+                }}
+            >
                 <h1 className=' text-xl font-bold'>hello I'am</h1>
-                <h1 className={`text-5xl font-bold ${theme == "dark" ? "text-white" : "text-black"}`}>Yash Mulik</h1>
+                <motion.h1 className={`text-5xl font-bold ${theme == "dark" ? "text-white" : "text-black"}`}
+                    ref={divslide}
+                    variants={slideleft}
+                    initial="hidden"
+                    animate={slideview ? "visible" : "hidden"}
+                    transition={{
+                        duration: 0.5,
+                        delay: 0.65
+                    }}
+                >Yash Mulik</motion.h1>
                 <h1 className=' text-2xl font-bold my-1'>Web <span className={`${theme == 'dark' ? ' text-green-500' : ' text-green-700'}`}>Developer .</span></h1>
                 <h1 className=' text-lg my-2'>Web developer with passion for continuous learning,leveraging cutting-edage technologies and actively pursuing challenging projects to expand skillset.</h1>
                 <span className=' flex'><button className={`${theme == 'dark' ? ' bg-green-500' : ' bg-green-700'} text-white py-1 px-3 rounded-sm m-2 text-lg font-bold`}><a href="mailto:yashmulik95@gmail.com">Send Email</a></button><h1 className='m-2 text-xl font-bold'><u><a href='#project'>See Project</a></u></h1></span>
-            </div>
-            <div className=' sm:w-1/2 h-full sm:h-[88vh]'>
-                <img src={photo} alt="" className=' w-full h-full p-6' />
-            </div>
+            </motion.div>
+            <motion.div className=' sm:w-1/2 h-full sm:h-[88vh] flex justify-center items-center rounded-sm'
+
+            >
+                <LazyLoadImage src={photo} alt="" className=' w-[75vh] h-[65vh] p-6' effect='blur' />
+            </motion.div>
             <label className="swap swap-rotate absolute right-5"  >
                 <input type="checkbox" onClick={handletheme} className='w-4 h-4' checked={theme == 'dark' ? true : false} />
                 <svg className="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>

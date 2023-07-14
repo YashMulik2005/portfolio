@@ -15,9 +15,21 @@ export const ThemeContextProvider = ({ children }) => {
         }
     }
 
+    const fade = {
+        "hidden": { opacity: 0 },
+        "visible": { opacity: 1 }
+    }
+
+    const slideleft = {
+        "hidden": { opacity: 0, x: -40 },
+        "visible": { opacity: 1, x: 10 }
+    }
+
     const value = {
         theme,
-        changetheme
+        changetheme,
+        fade,
+        slideleft
     }
     return <ThemeContext.Provider value={value}>
         {children}

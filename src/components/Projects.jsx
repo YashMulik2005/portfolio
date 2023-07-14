@@ -7,28 +7,28 @@ import themehook from './ThemeContext'
 function Projects() {
     const { theme } = themehook()
     return (
-        <div className={`${theme == "dark" ? "bg-[#0E0B0B]" : "bg-slate-300"}  p-5 `} id="project">
+        <div className={`${theme == "dark" ? "bg-[#0E0B0B]" : "bg-slate-300"}  p-5 sm:h-[65vh] flex flex-col justify-center items-center `} id="project">
             <h1 className=' text-center text-3xl font-bold mt-5'>My Projects</h1>
             <div className=' flex flex-col sm:flex-row p-2'>
                 <div className=' sm:w-1/3 w-full  m-2 p-3'>
                     <img src={news} alt="" className=' w-full sm:h-[82%] h-40 rounded-md' />
-                    <section className=' flex justify-center'>
-                        <button className=' bg-green-800 text-white py-1 px-3 m-2 rounded-sm'><a href="https://news020202.netlify.app/">Visit</a></button>
-                        <button className=' bg-green-800 text-white py-1 px-3 m-2 rounded-sm'><a href=" https://github.com/YashMulik2005/News_app.git">Github</a></button>
+                    <section className=' flex justify-center p-3'>
+                        <button className=' bg-green-800 text-white py-1 px-5 m-2 rounded-md font-bold'><a href="https://news020202.netlify.app/">Visit</a></button>
+                        <button className=' bg-green-800 text-white py-1 px-5 m-2 rounded-md font-bold'><a href=" https://github.com/YashMulik2005/News_app.git">Github</a></button>
                     </section>
                 </div>
                 <div className={` sm:w-1/3 w-full m-2 p-3  `} >
                     <img src={notes} alt="" className=' w-full sm:h-[82%] h-40 rounded-md' />
-                    <section className=' flex justify-center'>
-                        <button className=' bg-green-800 text-white py-1 px-3 m-2 rounded-sm'><a href='https://notes-app-ym.netlify.app/'>Visit</a></button>
-                        <button className=' bg-green-800 text-white py-1 px-3 m-2 rounded-sm'><a href='https://github.com/YashMulik2005/Notes_App.git'>Github</a></button>
+                    <section className=' flex justify-center p-3'>
+                        <button className=' bg-green-800 text-white py-1 px-5 m-2 rounded-md font-bold'><a href='https://notes-app-ym.netlify.app/'>Visit</a></button>
+                        <button className=' bg-green-800 text-white py-1 px-5 m-2 rounded-md font-bold'><a href='https://github.com/YashMulik2005/Notes_App.git'>Github</a></button>
                     </section>
                 </div>
                 <div className=' sm:w-1/3 w-full m-2 p-3'>
                     <img src={forum} alt="" className=' w-full sm:h-[82%] h-40 rounded-md' />
-                    <section className=' flex justify-center'>
-                        <button className=' bg-green-800 text-white py-1 px-3 m-2 rounded-sm'><a href='http://codingsolutions.great-site.net'>Visit</a></button>
-                        <button className=' bg-green-800 text-white py-1 px-3 m-2 rounded-sm'><a href='https://github.com/YashMulik2005/Forum_YM.git'>Github</a></button>
+                    <section className=' flex justify-center p-3'>
+                        <button className=' bg-green-800 text-white py-1 px-5 m-2 rounded-md font-bold'><a href='http://codingsolutions.great-site.net'>Visit</a></button>
+                        <button className=' bg-green-800 text-white py-1 px-5 m-2 rounded-md font-bold'><a href='https://github.com/YashMulik2005/Forum_YM.git'>Github</a></button>
                     </section>
                 </div>
             </div>
