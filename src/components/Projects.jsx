@@ -5,9 +5,13 @@ import notes from '../assets/notes.png'
 import themehook from './ThemeContext'
 
 function Projects() {
-    const { theme } = themehook()
+    const { theme, setheight } = themehook()
+
+    const handlenav = () => {
+        setheight(false)
+    }
     return (
-        <div className={`${theme == "dark" ? "bg-[#0E0B0B]" : "bg-slate-300"}  p-5 sm:h-[65vh] flex flex-col justify-center items-center `} id="project">
+        <div className={`${theme == "dark" ? "bg-[#0E0B0B]" : "bg-slate-300"}  p-5 sm:h-[65vh] flex flex-col justify-center items-center `} id="project" onClick={handlenav}>
             <h1 className=' text-center text-3xl font-bold mt-5'>My Projects</h1>
             <div className=' flex flex-col sm:flex-row p-2'>
                 <div className=' sm:w-1/3 w-full  m-2 p-3'>

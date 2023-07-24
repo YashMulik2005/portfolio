@@ -4,12 +4,28 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { ImCancelCircle } from 'react-icons/im'
 
 function Navbar() {
-    const { theme, changetheme } = themehook()
-    const [height, setheight] = useState(false)
+    const { theme, changetheme, setheight, height } = themehook()
 
     const handletoggle = () => {
         setheight(!height)
     }
+
+    const scrollToSkills = () => {
+        const aboutSection = document.getElementById('skills');
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+    };
+    const scrollToAbout = () => {
+        const aboutSection = document.getElementById('about');
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+    };
+    const scrollToContact = () => {
+        const aboutSection = document.getElementById('contact');
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+    };
+    const scrollToProjects = () => {
+        const aboutSection = document.getElementById('project');
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+    };
 
     const handletheme = () => {
         changetheme()
@@ -35,10 +51,10 @@ function Navbar() {
             </nav>
             <div >
                 <ul className={`sm:flex justify-center items-center shadow-md m-1 ${height ? "h-32" : "h-0 overflow-hidden"} sm:h-auto transition-all ease-linear duration-300 `}>
-                    <li className='m-[5px] font-semibold '><a href='#about'>About</a></li>
-                    <li className='m-[5px] font-semibold '><a href='#contact'>Contact</a></li>
-                    <li className='m-[5px] font-semibold '><a href='#project'>Projects</a></li>
-                    <li className='m-[5px] font-semibold '><a href='#skills'>Skills</a></li>
+                    <li className='m-[5px] font-semibold ' onClick={scrollToAbout}>About</li>
+                    <li className='m-[5px] font-semibold ' onClick={scrollToContact}>Contact</li>
+                    <li className='m-[5px] font-semibold ' onClick={scrollToProjects}>Projects</li>
+                    <li className='m-[5px] font-semibold ' onClick={scrollToSkills}>Skills</li>
                 </ul>
             </div>
         </div>

@@ -7,7 +7,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function Home() {
-    const { theme, changetheme, fade, slideleft } = themehook()
+    const { theme, changetheme, fade, slideleft, setheight } = themehook()
     const handletheme = () => {
         changetheme()
     }
@@ -27,8 +27,13 @@ function Home() {
     //     "hidden": { opacity: 0, x: -40 },
     //     "visible": { opacity: 1, x: 10 }
     // }
+
+    const handlenav = () => {
+        setheight(false)
+    }
+
     return (
-        <div className=' flex flex-col sm:flex-row mt-2'>
+        <div className=' flex flex-col sm:flex-row mt-2' onClick={handlenav}>
             <motion.div className=' flex flex-col sm:w-1/2 items-centers sm:items-start justify-center sm:h-[88vh] px-10 py-5 sm:py-0'
                 ref={divfade}
                 variants={fade}

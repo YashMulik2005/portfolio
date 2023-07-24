@@ -1,9 +1,15 @@
 import React from 'react'
 import photo from '../assets/contact.png'
+import themehook from './ThemeContext'
 
 function Contact() {
+    const { setheight } = themehook()
+
+    const handlenav = () => {
+        setheight(false)
+    }
     return (
-        <div className=' flex flex-col sm:flex-row m-5' id='contact'>
+        <div className=' flex flex-col sm:flex-row m-5' id='contact' onClick={handlenav}>
             <div className=' sm:w-1/2 w-full p-5'>
                 <img src={photo} alt="" className=' w-[90%] h-[90%] bg-contain' />
             </div>

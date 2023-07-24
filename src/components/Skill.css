@@ -1,0 +1,13 @@
+.html:hover{
+    background-color: rgb(15, 113, 15);
+    height: 250px;
+}
+
+.html:hover .html-child{
+    display: block;
+    color: white;
+}
+
+.html:hover .html-text{
+    color: white;
+}

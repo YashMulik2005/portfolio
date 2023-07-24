@@ -6,7 +6,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import { delay, motion, useInView } from 'framer-motion'
 
 function About() {
-    const { theme } = themehook()
+    const { theme, setheight } = themehook()
     const divtext = useRef(null)
 
     const Inview = useInView(divtext, { once: false })
@@ -16,8 +16,12 @@ function About() {
         "visible": { opacity: 1, y: 0 }
     }
 
+    const handlenav = () => {
+        setheight(false)
+    }
+
     return (
-        <div className={`flex flex-col-reverse sm:mt-[-10px] sm:flex-row py-7 sm:py-0 ${theme == "dark" ? "bg-[#0E0B0B]" : " bg-slate-300"} `} id='about'>
+        <div className={`flex flex-col-reverse sm:mt-[-10px] sm:flex-row py-7 sm:py-0 ${theme == "dark" ? "bg-[#0E0B0B]" : " bg-slate-300"} `} id='about' onClick={handlenav}>
             <div className=' sm:w-1/2 sm:h-[70vh] w-full '>
                 <LazyLoadImage src={photo} alt="" className=' w-[70vh] h-[65vh] p-8 sm:p-10' effect='blur' />
             </div>

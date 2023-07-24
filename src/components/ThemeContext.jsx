@@ -5,6 +5,7 @@ const ThemeContext = createContext();
 
 export const ThemeContextProvider = ({ children }) => {
     const [theme, settheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "garden");
+    const [height, setheight] = useState(false)
 
     const changetheme = () => {
         if (theme == "dark") {
@@ -29,7 +30,9 @@ export const ThemeContextProvider = ({ children }) => {
         theme,
         changetheme,
         fade,
-        slideleft
+        slideleft,
+        height,
+        setheight
     }
     return <ThemeContext.Provider value={value}>
         {children}
