@@ -27,11 +27,11 @@ function Skills() {
     }
 
     return (
-        <div div className=' flex flex-col justify-center items-center p-7 sm:h-[65vh]' id='skills' onClick={handlenav} >
+        <div div className=' flex flex-col justify-center items-center p-7 sm:h-[65vh] sm:px-20' id='skills' onClick={handlenav} >
             <h1 className=' text-center text-3xl font-bold'>My Skills</h1>
             <div className=' flex p-5 flex-col sm:flex-row w-[100%]'>
                 <div className='sm:w-1/4 w-full flex justify-center '>
-                    <div className={` group rounded  flex flex-col w-full sm:w-56 h-36 hover:sm:h-60 hover:h-48 hover:bg-green-500 my-5 sm:my-0
+                    <div className={` group rounded  flex flex-col w-full sm:w-56 h-36 hover:h-auto hover:bg-green-700 my-5 sm:my-0
                      p-5  overflow-hidden items-center ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} m-2 transition-all ease-linear duration-300`}>
                         <motion.section ref={div1}
                             variants={fade}
@@ -50,7 +50,7 @@ function Skills() {
                     </div>
                 </div>
                 <div className=' sm:w-1/4 w-full flex justify-center'>
-                    <div className={` rounded group flex flex-col w-full sm:w-56 h-36 hover:sm:h-60 hover:h-48 hover:bg-green-500 p-5 overflow-hidden items-center ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} my-5 sm:my-0 m-2 transition-all ease-linear duration-300`}>
+                    <div className={` rounded group flex flex-col w-full sm:w-56 h-36 hover:h-auto hover:bg-green-700 p-5 overflow-hidden items-center ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} my-5 sm:my-0 m-2 transition-all ease-linear duration-300`}>
                         <motion.section ref={div2}
                             variants={fade}
                             initial="hidden"
@@ -66,7 +66,7 @@ function Skills() {
                     </div>
                 </div>
                 <div className=' sm:w-1/4 w-full flex justify-center'>
-                    <div className={`rounded group flex flex-col w-full sm:w-56  h-36 hover:sm:h-60 hover:h-48 hover:bg-green-500 p-5 overflow-hidden items-center ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} my-5 sm:my-0 m-2 transition-all ease-linear duration-300`}>
+                    <div className={`rounded group flex flex-col w-full sm:w-56 h-36 hover:h-auto hover:bg-green-700 p-5 overflow-hidden items-center ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} my-5 sm:my-0 m-2 transition-all ease-linear duration-300`}>
                         <motion.section ref={div3}
                             variants={fade}
                             initial="hidden"
@@ -82,7 +82,7 @@ function Skills() {
                     </div>
                 </div>
                 <div className=' sm:w-1/4 w-full flex justify-center'>
-                    <div className={`flex group rounded flex-col w-full sm:w-56 h-36 hover:sm:h-60 hover:h-48 hover:bg-green-500 p-5 overflow-hidden items-center ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} my-5 sm:my-0 m-2 transition-all ease-linear duration-300`}>
+                    <div className={`flex group rounded flex-col w-full sm:w-56 h-36 hover:h-auto hover:bg-green-700 p-5 overflow-hidden items-center ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} my-5 sm:my-0 m-2 transition-all ease-linear duration-300`}>
                         <motion.section ref={div4}
                             variants={fade}
                             initial="hidden"
