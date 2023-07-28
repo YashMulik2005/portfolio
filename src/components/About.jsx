@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import photo from '../assets/react.svg'
+import photo from '../assets/p.png'
 import themehook from './ThemeContext'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -22,8 +22,8 @@ function About() {
 
     return (
         <div className={`flex flex-col-reverse sm:mt-[-10px] sm:flex-row py-7 sm:px-20 sm:py-0 ${theme == "dark" ? "bg-[#0E0B0B]" : " bg-slate-300"} `} id='about' onClick={handlenav}>
-            <div className=' sm:w-1/2 sm:h-[70vh] w-full '>
-                <LazyLoadImage src={photo} alt="" className=' w-[70vh] h-[65vh] p-8 sm:p-10' effect='blur' />
+            <div className=' sm:w-1/2 sm:h-[100%] w-full '>
+                <LazyLoadImage src={photo} alt="" className=' w-[100vh] h-[75vh] p-8 sm:p-10 bg-contain' effect='blur' />
             </div>
             <motion.div className=' sm:w-1/2 sm:h-[70vh] flex flex-col justify-center sm:items-start px-7 w-full items-center' ref={divtext}
                 variants={fadeup}
