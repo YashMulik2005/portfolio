@@ -27,10 +27,10 @@ function Skills() {
     }
 
     return (
-        <div div className=' flex flex-col justify-center items-center p-7 sm:h-[65vh] sm:px-20' id='skills' onClick={handlenav} >
+        <div div className=' flex flex-col justify-center items-center p-7 min-[852px]:h-[65vh] sm:px-20' id='skills' onClick={handlenav} >
             <h1 className=' text-center text-3xl font-bold'>My Skills</h1>
-            <div className=' flex p-5 flex-col sm:flex-row w-[100%]'>
-                <div className='sm:w-1/4 w-full flex justify-center '>
+            <div className=' flex p-5 flex-col min-[852px]:flex-row w-[100%]'>
+                <div className='min-[852px]:w-1/4 w-full flex justify-center '>
                     <div className={` group rounded  flex flex-col w-full sm:w-56 h-36 hover:h-auto hover:bg-green-700 my-5 sm:my-0
                      p-5  overflow-hidden items-center ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} m-2 transition-all ease-linear duration-300`}>
                         <motion.section ref={div1}
@@ -49,7 +49,7 @@ function Skills() {
                         <p className=' hidden group-hover:block group-hover:text-white'>HTML is the standard markup language for Web pages. With HTML you can create your own Website.</p>
                     </div>
                 </div>
-                <div className=' sm:w-1/4 w-full flex justify-center'>
+                <div className=' min-[852px]:w-1/4 w-full flex justify-center'>
                     <div className={` rounded group flex flex-col w-full sm:w-56 h-36 hover:h-auto hover:bg-green-700 p-5 overflow-hidden items-center ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} my-5 sm:my-0 m-2 transition-all ease-linear duration-300`}>
                         <motion.section ref={div2}
                             variants={fade}
@@ -65,7 +65,7 @@ function Skills() {
                         <p className=' hidden group-hover:block group-hover:text-white'>React is a JavaScript library for building user interfaces.React is used to build single-page applications.</p>
                     </div>
                 </div>
-                <div className=' sm:w-1/4 w-full flex justify-center'>
+                <div className='min-[852px]:w-1/4 w-full flex justify-center'>
                     <div className={`rounded group flex flex-col w-full sm:w-56 h-36 hover:h-auto hover:bg-green-700 p-5 overflow-hidden items-center ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} my-5 sm:my-0 m-2 transition-all ease-linear duration-300`}>
                         <motion.section ref={div3}
                             variants={fade}
@@ -81,7 +81,7 @@ function Skills() {
                         <p className=' hidden group-hover:block group-hover:text-white'>Node.js is an open source server environment.Node.js allows you to run JavaScript on the server.</p>
                     </div>
                 </div>
-                <div className=' sm:w-1/4 w-full flex justify-center'>
+                <div className='min-[852px]:w-1/4 w-full flex justify-center'>
                     <div className={`flex group rounded flex-col w-full sm:w-56 h-36 hover:h-auto hover:bg-green-700 p-5 overflow-hidden items-center ${theme == "dark" ? " shadow-2xl" : "shadow-[15px_15px_41px_#b1b1b1,-15px_-15px_41px_#ffffff]"} my-5 sm:my-0 m-2 transition-all ease-linear duration-300`}>
                         <motion.section ref={div4}
                             variants={fade}
