@@ -21,11 +21,11 @@ function About() {
     }
 
     return (
-        <div className={`flex flex-col-reverse sm:mt-[-10px] min-[700px]:flex-row py-7 justify-center items-center sm:px-20 sm:py-0 ${theme == "dark" ? "bg-[#0E0B0B]" : " bg-slate-300"}  min-[700px]:h-auto `} id='about' onClick={handlenav}>
-            <div className=' min-[700px]:w-1/2 sm:h-[100%] w-full '>
+        <div className={`flex flex-col-reverse sm:mt-[-10px] min-[800px]:flex-row py-7 justify-center items-center sm:px-20 sm:py-0 ${theme == "dark" ? "bg-[#0E0B0B]" : " bg-slate-300"}  min-[700px]:h-auto `} id='about' onClick={handlenav}>
+            <div className=' min-[800px]:w-1/2 sm:h-[100%] w-full '>
                 <LazyLoadImage src={photo} alt="" className=' w-[100vh] h-[75vh] p-8 sm:p-10 bg-contain' effect='blur' />
             </div>
-            <motion.div className=' min-[700px]:w-1/2 sm:h-[70%] flex flex-col justify-center sm:items-start px-7 w-full items-center p-4' ref={divtext}
+            <motion.div className=' min-[800px]:w-1/2 sm:h-[70%] flex flex-col justify-center sm:items-start px-7 w-full items-center p-4' ref={divtext}
                 variants={fadeup}
                 initial="hidden"
                 animate={Inview ? "visible" : "hidden"}

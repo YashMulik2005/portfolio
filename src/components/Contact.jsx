@@ -27,8 +27,8 @@ function Contact() {
     }
 
     return (
-        <div className=' flex flex-col sm:flex-row m-5 sm:px-20' id='contact' onClick={handlenav}>
-            <div className=' sm:w-1/2 w-full p-5 flex flex-col justify-center items-start'>
+        <div className=' flex flex-col min-[929px]:flex-row m-5 sm:px-20' id='contact' onClick={handlenav}>
+            <div className=' min-[929px]:w-1/2 w-full p-5 flex flex-col justify-center items-start'>
                 <h1 className=' text-center text-[40px] sm:text-[60px] font-bold'>Contact Me</h1>
                 <section>
                     <section className=' flex'>
@@ -47,7 +47,7 @@ function Contact() {
                 </section>
                 <a href={pdf} download={pdf}><button className=' bg-green-700 text-white py-2 px-7 rounded-md m-2 font-semibold'>Download Resume</button></a>
             </div>
-            <div className=' sm:w-1/2 w-full p-5 flex flex-col justify-center items-center'>
+            <div className=' min-[929px]:w-1/2 w-full p-5 flex flex-col justify-center items-center'>
                 <section className={` ${sec ? "flex" : "hidden"} bg-green-700 p-2 text-white rounded-lg m-2 flex justify-around w-[80%] `}>
                     <h1 className=' font-semibold'>Message send sucessfully!!!!</h1>
                     <section>
